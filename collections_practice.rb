@@ -19,17 +19,18 @@ def swap_elements(array)
   array
 end
 
-def swap_elements_with_flag(array, start_point, end_point)
-  t = array[start_point]
-  array[start_point] = array[end_point]
-  array[end_point] = t
-  array
-end
+#EXTRA PRACTICE -> Dynamically accept the start and end point to swap
+# def swap_elements_with_flag(array, start_point, end_point)
+#   t = array[start_point]
+#   array[start_point] = array[end_point]
+#   array[end_point] = t
+#   array
+# end
 
-def swap_elements_from_to(array, start_point, end_point)
-  array[start_point], array[end_point] = array[end_point], array[start_point]
-  array
-end
+# def swap_elements_from_to(array, start_point, end_point)
+#   array[start_point], array[end_point] = array[end_point], array[start_point]
+#   array
+# end
 
 #binding.pry
 # Benchmark.bmbm do |x|
