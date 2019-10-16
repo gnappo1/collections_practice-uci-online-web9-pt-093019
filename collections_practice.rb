@@ -34,12 +34,20 @@ end
 
 def find_a(array)
   final_array = []
-  #alternative A
+  #alternative A: start_with?
   array.each {|el| final_array << el if el.start_with?('a')}
+  #alternative B: match & Regex
   #array.each {|el| final_array << el if el.match(/^a/)}
   final_array
 end 
 
+def sum_array(array)
+  array.reduce(0, :+)
+end
+
+def add_s
+  
+end
 
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
 # def swap_elements_with_flag(array, start_point, end_point)
