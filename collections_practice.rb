@@ -66,10 +66,10 @@ def sum_array(array)
   # array.inject(0, :+)
 end
 
-def add_s
+def add_s(array)
   final_array = []
   array.each do |element| 
-    final_array << ele
+    element == array[1] ? final_array << "#{element}s" : final_array << element
 end
 
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
