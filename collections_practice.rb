@@ -33,7 +33,10 @@ def kesha_maker(array)
   # final_array
   
   #Version 2: Collect
-  array.collect { |string| string[2] = "$"}
+  array.collect do |string| 
+    string[2] = "$"
+    string
+  end
 end
 
 def find_a(array)
