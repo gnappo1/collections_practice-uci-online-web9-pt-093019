@@ -67,7 +67,9 @@ def sum_array(array)
 end
 
 def add_s
-  
+  final_array = []
+  array.each do |element| 
+    final_array << ele
 end
 
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
