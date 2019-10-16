@@ -42,7 +42,13 @@ def find_a(array)
 end 
 
 def sum_array(array)
-  array.reduce(0, :+)
+  #Version A: each
+  total = 0
+  array.each {|element| total += element}
+  total
+  #Version C: inject/reduce with shortcut
+  # array.reduce(0, :+)
+  # array.inject(0, :+)
 end
 
 def add_s
