@@ -19,6 +19,27 @@ def swap_elements(array)
   array
 end
 
+def reverse_array(array)
+  array.reverse
+end 
+
+def kesha_maker(array)
+  final_array = []
+  array.each do |string| 
+    string[2] = "$"
+    final_array << string
+  end
+  final_array
+end
+
+def find_a(array)
+  final_array = []
+  #alternative A
+  array.each {|el| final_array << el if el.match(/^a/)}
+  final_array
+end 
+
+
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
 # def swap_elements_with_flag(array, start_point, end_point)
 #   t = array[start_point]
@@ -43,22 +64,3 @@ end
 #   x.report("Flag Version") {10_000.times{swap_elements_with_flag([3, 5, false, "doodle"], 1, 3)}}
 #   x.compare!
 # end
-
-def reverse_array(array)
-  array.reverse
-end 
-
-def kesha_maker(array)
-  final_array = []
-  array.each do |string| 
-    string[2] = "$"
-    final_array << string
-  end
-  final_array
-end
-
-def find_a(array)
-  final_array = []
-  array.each {|el| final_array << el if el.match(/^a/)}
-  final_array
-end 
