@@ -35,7 +35,8 @@ end
 def find_a(array)
   final_array = []
   #alternative A
-  array.each {|el| final_array << el if el.match(/^a/)}
+  array.each {|el| final_array << el if el.start_with?('a')}
+  #array.each {|el| final_array << el if el.match(/^a/)}
   final_array
 end 
 
