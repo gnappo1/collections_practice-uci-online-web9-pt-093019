@@ -1,11 +1,9 @@
 require 'pry'
 require 'benchmark'
-require 'benchmark/memory'
+require 'benchmark/memory' #you'll have to also run in the terminal: gem install benchmark-memory
 
 def sort_array_asc(array)
-  array.sort do |a, b|
-    a <=> b
-  end
+  array.sort { |a, b| a <=> b }
 end 
 
 def sort_array_desc(array)
