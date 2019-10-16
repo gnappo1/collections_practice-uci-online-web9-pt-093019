@@ -34,18 +34,21 @@ end
 
 def find_a(array)
   final_array = []
+  
   #alternative A: start_with?
   array.each {|el| final_array << el if el.start_with?('a')}
+  
   #alternative B: match & Regex
   #array.each {|el| final_array << el if el.match(/^a/)}
+  
   final_array
 end 
 
 def sum_array(array)
   #Version A: each
-  # total = 0
-  # array.each {|element| total += element}
-  # total
+  total = 0
+  array.each {|element| total += element}
+  total
   #Version B: inject/reduce without shortcut
   array.reduce(0) {|total, element| total += element}
   #Version C: inject/reduce with shortcut
