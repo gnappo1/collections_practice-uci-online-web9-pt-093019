@@ -70,6 +70,8 @@ def add_s(array)
   final_array = []
   array.each do |element| 
     element == array[1] ? final_array << "#{element}s" : final_array << element
+  end
+  final_array
 end
 
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
