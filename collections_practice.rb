@@ -46,6 +46,8 @@ def sum_array(array)
   total = 0
   array.each {|element| total += element}
   total
+  #Version B: inject/reduce without shortcut
+  array.reduce(0) {|total, element| total += element}
   #Version C: inject/reduce with shortcut
   # array.reduce(0, :+)
   # array.inject(0, :+)
