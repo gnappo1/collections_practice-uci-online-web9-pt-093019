@@ -67,11 +67,17 @@ def sum_array(array)
 end
 
 def add_s(array)
+  #Version 1: Each
   final_array = []
   array.each do |element| 
     element == array[1] ? final_array << element : final_array << "#{element}s"
   end
   final_array
+  
+  #Version 2: Collect
+  array.collect do |element| 
+    element == array[1] ? element : "#{element}s"
+  end
 end
 
 #EXTRA PRACTICE -> Dynamically accept the start and end point to swap
