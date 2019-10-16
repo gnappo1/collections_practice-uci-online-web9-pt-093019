@@ -24,12 +24,16 @@ def reverse_array(array)
 end 
 
 def kesha_maker(array)
-  final_array = []
-  array.each do |string| 
-    string[2] = "$"
-    final_array << string
-  end
-  final_array
+  #Version 1: Each
+  # final_array = []
+  # array.each do |string| 
+  #   string[2] = "$"
+  #   final_array << string
+  # end
+  # final_array
+  
+  #Version 2: Collect
+  array.collect { |string| string[2] = "$"}
 end
 
 def find_a(array)
@@ -49,8 +53,11 @@ def sum_array(array)
   total = 0
   array.each {|element| total += element}
   total
+  
   #Version B: inject/reduce without shortcut
-  array.reduce(0) {|total, element| total += element}
+  #array.reduce(0) {|total, element| total += element}
+  #array.inject(0) {|total, element| total += element}
+  
   #Version C: inject/reduce with shortcut
   # array.reduce(0, :+)
   # array.inject(0, :+)
